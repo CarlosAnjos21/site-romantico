@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* ============================= */
+/* 🎨 FUNDO GRADIENTE ELEGANTE */
+/* ============================= */
+
+.bg-gradient-romantic {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  /* Escuro embaixo → claro em cima */
+  background: linear-gradient(
+    to top,
+    #ffe4ec,
+    #ffbbc3,   /* rosa médio */
+    #ffe4ec    /* rosa bebê - parte superior */
+  );
+}
+
+
+/* ============================= */
+/* 💖 CORAÇÕES FLUTUANTES */
+/* ============================= */
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-200vh);
+  }
+}
+
+.floating-heart {
+  position: absolute;
+
+  /* Começam já visíveis na tela */
+  bottom: -30px;
+
+  animation: floatUp linear infinite;
+
+  pointer-events: none;
+}
+
