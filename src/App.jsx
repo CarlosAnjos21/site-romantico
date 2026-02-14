@@ -13,9 +13,9 @@ function App() {
   const toggleTab = (tab) => setActiveTab(activeTab === tab ? null : tab);
 
   const images = Object.values(
-    import.meta.glob("./assets/*.jpeg", { eager: true, import: "default" })
+    import.meta.glob("./assets/*.jpeg", { eager: true, import: "default" }),
   ).sort((a, b) =>
-    a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })
+    a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }),
   );
 
   // Refs para animação de scroll
@@ -35,7 +35,6 @@ function App() {
 
   return (
     <div className="relative min-h-screen overflow-hidden flex justify-center items-start p-6">
-
       {/* 🎨 Fundo */}
       <div className="bg-gradient-romantic absolute inset-0 z-0"></div>
 
@@ -66,7 +65,10 @@ function App() {
                      bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-rose-100 flex flex-col items-center text-center shadow-md hover:shadow-lg"
         >
           <Calendar className="text-rose-500 mb-3" size={32} />
-          <h3 className="text-lg font-semibold text-gray-800"> 📅 Nosso Dia 11</h3>
+          <h3 className="text-lg font-semibold text-gray-800">
+            {" "}
+            📅 Nosso Dia 11
+          </h3>
           <p className="text-sm text-gray-500 mt-2">
             Cada mês ao seu lado não é só mais um número, é mais amor, mais
             cumplicidade, mais certeza de que quero continuar escolhendo você.
@@ -87,7 +89,13 @@ function App() {
             isOpen={activeTab === "momentos"}
             onClick={() => toggleTab("momentos")}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-3 max-h-96 overflow-y-auto pr-2">
+            <div
+              className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-3 max-h-96 overflow-y-auto pr-2"
+              style={{
+                scrollbarWidth: "none",
+                scrollbarColor: "#f472b6 transparent",
+              }}
+            >
               {images.map((img, index) => (
                 <img
                   key={index}
@@ -112,8 +120,8 @@ function App() {
             isOpen={activeTab === "inicio"}
             onClick={() => toggleTab("inicio")}
           >
-            Lembro exatamente do dia em que nossos caminhos se cruzaram.
-            Foi ali que algo diferente começou a nascer dentro de mim.
+            Lembro exatamente do dia em que nossos caminhos se cruzaram. Foi ali
+            que algo diferente começou a nascer dentro de mim.
           </ActionCard>
 
           {/* 📖 Nossa História */}
@@ -126,8 +134,8 @@ function App() {
             isOpen={activeTab === "historia"}
             onClick={() => toggleTab("historia")}
           >
-            Desde as conversas de madrugada até os planos de futuro,
-            cada detalhe foi construindo algo que eu nunca imaginei viver.
+            Desde as conversas de madrugada até os planos de futuro, cada
+            detalhe foi construindo algo que eu nunca imaginei viver.
           </ActionCard>
 
           {/* 💍 Promessa */}
@@ -140,9 +148,9 @@ function App() {
             isOpen={activeTab === "promessa"}
             onClick={() => toggleTab("promessa")}
           >
-            Eu prometo estar ao seu lado nos dias bons e nos difíceis.
-            Prometo cuidar, respeitar e amar você todos os dias.
-            Você é minha escolha hoje e sempre.
+            Eu prometo estar ao seu lado nos dias bons e nos difíceis. Prometo
+            cuidar, respeitar e amar você todos os dias. Você é minha escolha
+            hoje e sempre.
           </ActionCard>
 
           {/* ❤️ Eu Te Amo */}
@@ -163,7 +171,7 @@ function App() {
             className="absolute left-4 text-white text-4xl"
             onClick={() =>
               setSelectedIndex(
-                (selectedIndex - 1 + images.length) % images.length
+                (selectedIndex - 1 + images.length) % images.length,
               )
             }
           >
@@ -189,4 +197,3 @@ function App() {
 }
 
 export default App;
-
