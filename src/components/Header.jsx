@@ -5,7 +5,7 @@ export const Header = () => (
     <p
       className="font-serif text-rose-600 italic text-center mx-auto leading-snug"
       style={{
-        fontSize: "clamp(15px, 6vw, 32px)", // fonte mínima 18px, escala com 8% da largura da tela
+        fontSize: "clamp(16px, 6vw, 32px)", // fonte mínima 18px, escala com 8% da largura da tela
         maxWidth: "100%", // aumenta largura máxima em telas pequenas
         minWidth: "280px", // garante largura mínima para não quebrar demais
       }}
@@ -19,7 +19,8 @@ export const Header = () => (
 
     <button className="mt-6 mx-auto flex items-center gap-2 px-5 py-2 bg-white rounded-full text-rose-500 text-xs font-semibold shadow-sm border border-rose-100 transition-transform hover:scale-105">
       <Heart size={14} fill="currentColor" />
-      Role com carinho
+      Larissa e Carlos
+      <Heart size={14} fill="currentColor" />
       <ChevronDown size={14} />
     </button>
   </header>

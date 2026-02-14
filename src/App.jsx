@@ -2,8 +2,9 @@ import { useState, useRef } from "react";
 import { Heart, Leaf, BookHeart, Camera, Calendar } from "lucide-react";
 import { Header } from "./components/Header";
 import { ActionCard } from "./components/ActionCard";
-import { Timeline } from "./components/Timeline";
+import { TimelineCard } from "./components/TimelineCard";
 import { useRevealOnScroll } from "./hooks/useRevealOnScroll";
+import { LoveCard } from "./components/LoveCard"; // novo card
 
 function App() {
   const [activeTab, setActiveTab] = useState(null);
@@ -56,7 +57,6 @@ function App() {
 
       {/* Conteúdo */}
       <div className="w-full max-w-md space-y-6 relative z-20">
-
         <Header />
 
         {/* 📅 Nosso Dia */}
@@ -66,7 +66,7 @@ function App() {
                      bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-rose-100 flex flex-col items-center text-center shadow-md hover:shadow-lg"
         >
           <Calendar className="text-rose-500 mb-3" size={32} />
-          <h3 className="text-lg font-semibold text-gray-800">📅 Nosso Dia 11</h3>
+          <h3 className="text-lg font-semibold text-gray-800"> 📅 Nosso Dia 11</h3>
           <p className="text-sm text-gray-500 mt-2">
             Cada mês ao seu lado não é só mais um número, é mais amor, mais
             cumplicidade, mais certeza de que quero continuar escolhendo você.
@@ -74,10 +74,9 @@ function App() {
         </div>
 
         {/* Timeline */}
-        <Timeline ref={timelineRef} />
+        <TimelineCard ref={timelineRef} />
 
         <div className="space-y-4 text-center">
-
           {/* 📸 Momentos */}
           <ActionCard
             ref={momentosRef}
@@ -147,13 +146,7 @@ function App() {
           </ActionCard>
 
           {/* ❤️ Eu Te Amo */}
-          <div className="bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-3xl p-6 text-center shadow-lg animate-pulse opacity-0 translate-y-6 scale-95 transition-all duration-700 ease-out">
-            <h2 className="text-2xl font-bold tracking-wide">❤ Eu Te Amo ❤</h2>
-            <p className="text-sm mt-2 opacity-90">
-              Mais do que palavras podem explicar.
-            </p>
-          </div>
-
+          <LoveCard />
         </div>
       </div>
 
@@ -196,3 +189,4 @@ function App() {
 }
 
 export default App;
+
