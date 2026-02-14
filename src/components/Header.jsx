@@ -3,13 +3,16 @@ import { Heart, ChevronDown } from "lucide-react";
 export const Header = () => (
   <header className="text-center relative z-10">
     <h1
-      className="font-serif text-rose-600 italic leading-tight text-center mx-auto"
+      className="font-serif text-rose-600 italic text-center mx-auto leading-snug"
       style={{
-        fontSize: "clamp(1rem, 5vw, 3rem)", // mínimo 1rem, escala com 5% da viewport, máximo 3rem
-        maxWidth: "36ch", // força duas linhas aproximadas
+        fontSize: "clamp(1rem, 5vw, 3rem)", // fonte mínima 1rem, máxima 3rem, escala com viewport
+        maxWidth: "60ch", // largura máxima para limitar a linha
+        height: "2.4em", // força altura de exatamente 2 linhas (line-height * 2)
+        overflow: "hidden", // corta qualquer excesso
+        display: "block",
       }}
     >
-      Para você!! que deixa ❤ meus sábados mais felizes ❤
+      Para você!! que deixa <br /> ❤ meus sábados mais felizes ❤
     </h1>
 
     <p className="text-sm text-rose-400 mt-2 italic">
