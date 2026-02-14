@@ -1,9 +1,15 @@
-import { Heart, ChevronDown } from 'lucide-react'
+import { Heart, ChevronDown } from "lucide-react";
 
 export const Header = () => (
   <header className="text-center relative z-10">
-    <h1 className="text-3xl font-serif text-rose-600 italic leading-tight max-w-[24ch] mx-auto break-words">
-      Para você!! que deixa ❤ <br /> meus sábados mais felizes ❤
+    <h1
+      className="font-serif text-rose-600 italic leading-tight text-center mx-auto"
+      style={{
+        fontSize: "clamp(1rem, 5vw, 3rem)", // mínimo 1rem, escala com 5% da viewport, máximo 3rem
+        maxWidth: "36ch", // força duas linhas aproximadas
+      }}
+    >
+      Para você!! que deixa ❤ meus sábados mais felizes ❤
     </h1>
 
     <p className="text-sm text-rose-400 mt-2 italic">
@@ -16,4 +22,4 @@ export const Header = () => (
       <ChevronDown size={14} />
     </button>
   </header>
-)
+);
