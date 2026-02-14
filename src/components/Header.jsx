@@ -5,9 +5,9 @@ export const Header = () => (
     <p
       className="font-serif text-rose-600 italic text-center mx-auto leading-snug"
       style={{
-        fontSize: "clamp(18px, 5vw, 30px)", // mínimo 16px, máximo 30px, escala suave com 5% da viewport
-        maxWidth: "min(100%, 460px)", // ocupa no máximo 480px ou 90% da tela, o que for menor
-        padding: "0 1rem", // garante espaço lateral em telas muito pequenas
+        fontSize: "clamp(15px, 6vw, 32px)", // fonte mínima 18px, escala com 8% da largura da tela
+        maxWidth: "100%", // aumenta largura máxima em telas pequenas
+        minWidth: "280px", // garante largura mínima para não quebrar demais
       }}
     >
       Para você!! que deixa <br /> meus sábados mais felizes ❤
