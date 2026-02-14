@@ -2,7 +2,7 @@ import { Heart, ChevronDown } from 'lucide-react'
 
 export const Header = () => (
   <header className="text-center relative z-10">
-    <h1 className="text-3xl font-serif text-rose-600 italic leading-tight">
+    <h1 className="text-3xl font-serif text-rose-600 italic leading-tight max-w-[24ch] mx-auto break-words">
       Para você!! que deixa ❤ <br /> meus sábados mais felizes ❤
     </h1>
 
